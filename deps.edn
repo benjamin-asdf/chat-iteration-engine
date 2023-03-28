@@ -1,0 +1,5 @@
+{:deps
+ {org.clojure/tools.deps.alpha {:mvn/version "0.14.1212"}
+  com.xtdb/xtdb-core {:mvn/version "1.23.1"}
+  com.xtdb/xtdb-rocksdb {:mvn/version "1.23.1"}
+  net.clojars.wkok/openai-clojure {:mvn/version "0.5.0"}}}
