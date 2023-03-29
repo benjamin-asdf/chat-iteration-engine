@@ -1,6 +1,6 @@
 * Concepts
-The name chat comes from the currently tool I use for this, the openai chat api.
-This is for building agent like or self evolving intelligences with large language models as driver.
+The name chat comes from the current tool I use for this, the openai chat api.
+This is for building agent-like or self-evolving intelligences with large language models as drivers.
 
 * chat-iteration
 
@@ -9,16 +9,16 @@ The basic idea is that I have a program, the =engine=.
 There is 1 function =chat-iteration=.
 It takes a context and a =driver=, a =post-processor= and a =pre-processor=.
 
-We take the context, produce a prompt for the driver (presumably a large language model), to respond with update data.
+We take the context, and produce a prompt for the driver (presumably a large language model), to respond with update data.
 The post-processer reads the output of the driver.
 Then we eval, which means updating the context with the output of the driver.
 
 =prompt= -> driver -> driver-output ->  =read= (post-processer) -> update context -> build next prompt from new context (iterate).
 
 * Side effects
-My idea would be that output is allowed to be command like, but this is up to the engine implementation what to do with that.
+My idea would be that output is allowed to be command-like, but this is up to the engine implementation what to do with that.
 
-* implementation
+* Implementation
 
 #+begin_src clojure
 (defn chat-iteration [{:keys [context pre-process post-process driver]}]
