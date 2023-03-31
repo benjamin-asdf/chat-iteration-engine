@@ -28,5 +28,9 @@ My idea would be that output is allowed to be command-like, but this is up to th
     new-context))
 #+end_src
 
+* Examples
+
+[[file:examples/]]
+
 * Notes
 
